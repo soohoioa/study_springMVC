@@ -24,6 +24,11 @@ public class SpringMemberSaveControllerV1 {
 
         ModelAndView mv = new ModelAndView("save-result");
         mv.addObject("member", member);
+        /**
+         * mv.addObject("member", member); :
+         * 스프링이 제공하는 `ModelAndView` 를 통해 Model 데이터를 추가할 때는 `addObject()` 를 사용하면 된다.
+         * 이 데이터는 이후 뷰를 렌더링 할 때 사용된다.
+         */
         return mv;
     }
 }

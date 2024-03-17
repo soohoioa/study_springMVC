@@ -16,7 +16,6 @@ public class MemberSaveControllerV2 implements ControllerV2 {
 
     @Override
     public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
 

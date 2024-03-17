@@ -14,10 +14,13 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
+ *
  * JSON 형식 전송
  * content-type: application/json
- * message body: {"username": "hello", "age": 20} *
+ * message body: {"username": "hello", "age": 20}
+ * *
  */
+
 @WebServlet(name = "requestBodyJsonServlet", urlPatterns = "/request-body-json")
 public class RequestBodyJsonServlet extends HttpServlet {
 
@@ -25,6 +28,7 @@ public class RequestBodyJsonServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         ServletInputStream inputStream = request.getInputStream();
         String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
 

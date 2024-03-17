@@ -19,12 +19,12 @@ public class MemberListServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
-
         List<Member> members = memberRepository.findAll();
-        PrintWriter w = response.getWriter();
 
+        PrintWriter w = response.getWriter();
         w.write("<html>");
         w.write("<head>");
         w.write("    <meta charset=\"UTF-8\">");
@@ -38,14 +38,6 @@ public class MemberListServlet extends HttpServlet {
         w.write(" </thead>");
         w.write(" <tbody>");
 
-        /*
-        w.write("    <tr>");
-        w.write("        <td>1</td>");
-        w.write("        <td>userA</td>");
-        w.write("        <td>10</td>");
-        w.write("    </tr>");
-        */
-
         for (Member member : members) {
             w.write("    <tr>");
             w.write("        <td>"+member.getId()+"</td>");
@@ -58,10 +50,6 @@ public class MemberListServlet extends HttpServlet {
         w.write("</table>");
         w.write("</body>");
         w.write("</html>");
+
     }
 }
-/**
- * `MemberListServlet` 은 다음 순서로 동작한다.
- * 1. `memberRepository.findAll()` 을 통해 모든 회원을 조회한다.
- * 2. 회원 목록 HTML을 for 루프를 통해서 회원 수 만큼 동적으로 생성하고 응답한다.
- */

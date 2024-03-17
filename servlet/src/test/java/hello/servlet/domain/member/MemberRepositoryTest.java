@@ -1,26 +1,24 @@
 package hello.servlet.domain.member;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 
 class MemberRepositoryTest {
 
     MemberRepository memberRepository = MemberRepository.getInstance();
-    // 싱글톤으로 만들어서 new 로 생성할 수 없다.
-
     @AfterEach
     void afterEach() {
         memberRepository.clearStore();
-    } // 테스트 끝나면 종료
+    }
 
     @Test
     void save() {
-        // given
+        //given
         Member member = new Member("hello", 20);
 
         //when
@@ -46,5 +44,4 @@ class MemberRepositoryTest {
         assertThat(result.size()).isEqualTo(2);
         assertThat(result).contains(member1, member2);
     }
-
 }

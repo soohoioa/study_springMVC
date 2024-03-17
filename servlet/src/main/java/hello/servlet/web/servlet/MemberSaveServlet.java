@@ -33,23 +33,22 @@ public class MemberSaveServlet extends HttpServlet {
         PrintWriter w = response.getWriter();
         w.write("<html>\n" +
                 "<head>\n" +
-                "    <meta charset=\"UTF-8\">\n" +
-                "</head>\n" +
+                " <meta charset=\"UTF-8\">\n" + "</head>\n" +
                 "<body>\n" +
                 "성공\n" +
                 "<ul>\n" +
-                "    <li>id="+member.getId()+"</li>\n" +
-                "    <li>username="+member.getUsername()+"</li>\n" +
-                "    <li>age="+member.getAge()+"</li>\n" +
-                "</ul>\n" +
-                "<a href=\"/index.html\">메인</a>\n" +
-                "</body>\n" +
-                "</html>");
+                "    <li>id=" + member.getId() + "</li>\n" +
+                "    <li>username=" + member.getUsername() + "</li>\n" +
+                " <li>age=" + member.getAge() + "</li>\n" + "</ul>\n" +
+                "<a href=\"/index.html\">메인</a>\n" + "</body>\n" +
+                "</html>"
+        );
+
     }
 }
 /**
  *  `MemberSaveServlet` 은 다음 순서로 동작한다.
  * 1. 파라미터를 조회해서 Member 객체를 만든다.
- * 2. Member 객체를 MemberRepository 를 통해서 저장한다.
- * 3. Member 객체를 사용해서 결과 화면용 HTML 을 동적으로 만들어서 응답한다.
+ * 2. Member 객체를 MemberRepository를 통해서 저장한다.
+ * 3. Member 객체를 사용해서 결과 화면용 HTML을 동적으로 만들어서 응답한다.
  */

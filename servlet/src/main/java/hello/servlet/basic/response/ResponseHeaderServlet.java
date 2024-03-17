@@ -12,8 +12,10 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "responseHeaderServlet", urlPatterns = "/response-header")
 public class ResponseHeaderServlet extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         //[status-line]
         response.setStatus(HttpServletResponse.SC_OK); //200
 
@@ -33,7 +35,9 @@ public class ResponseHeaderServlet extends HttpServlet {
         writer.println("ok");
     }
 
-    // Content 편의 메서드
+    /**
+     * Content 편의 메서드
+     */
     private void content(HttpServletResponse response) {
         //Content-Type: text/plain;charset=utf-8
         //Content-Length: 2
@@ -43,7 +47,10 @@ public class ResponseHeaderServlet extends HttpServlet {
         //response.setContentLength(2); //(생략시 자동 생성)
     }
 
-    // Cookie 편의 메서드
+
+    /**
+     * Cookie 편의 메서드
+     */
     private void cookie(HttpServletResponse response) {
         //Set-Cookie: myCookie=good; Max-Age=600;
         // response.setHeader("Set-Cookie", "myCookie=good; Max-Age=600");
@@ -52,10 +59,13 @@ public class ResponseHeaderServlet extends HttpServlet {
         response.addCookie(cookie);
     }
 
-    // Redirect 편의 메서드
+    /**
+     * Redirect 편의 메서드
+     */
     private void redirect(HttpServletResponse response) throws IOException {
         //Status Code 302
         //Location: /basic/hello-form.html
+
         //response.setStatus(HttpServletResponse.SC_FOUND); //302
         //response.setHeader("Location", "/basic/hello-form.html");
         response.sendRedirect("/basic/hello-form.html");

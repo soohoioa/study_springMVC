@@ -51,13 +51,13 @@ public class RequestHeaderServlet extends HttpServlet {
         }
         */
 
-        request.getHeaderNames().asIterator().forEachRemaining(headerName -> System.out.println(headerName + ": " + headerName));
+        request.getHeaderNames().asIterator()
+                .forEachRemaining(headerName -> System.out.println(headerName + ": " + headerName));
 
         System.out.println("--- Headers - end ---");
         System.out.println();
     }
 
-    //Header 편리한 조회
     private void printHeaderUtils(HttpServletRequest request) {
         System.out.println("--- Header 편의 조회 start ---");
         System.out.println("[Host 편의 조회]");
