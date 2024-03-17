@@ -24,7 +24,7 @@ Packaging : War<br/>
 ** War 선택시 17버전으로 선택<br/>
 server.port=9095<br/>
 
-******
+***
 IntelliJ_All_Main : study_springMVC : springmvc<br/>
 Project : Gradle-Groovy<br/>
 Language : Java 17<br/>
