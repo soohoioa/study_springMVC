@@ -32,3 +32,14 @@ Spring Boot : 3.1.7<br/>
 Dependencies : Spring Web, Lombok, Thymeleaf<br/>
 Packaging : Jar<br/>
 server.port=9099<br/>
+
+***
+IntelliJ_All_Main : study_springMVC : item-service<br/>
+Project : Gradle-Groovy<br/>
+Language : Java 17<br/>
+Spring Boot : 3.1.7<br/>
+Dependencies : Spring Web, Lombok, Thymeleaf<br/>
+Packaging : Jar<br/>
+server.port=9098<br/>
+
+***
